@@ -144,6 +144,34 @@
   .work-tag { font-family: var(--mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text); opacity: 0; transition: opacity 0.3s; padding: 5px 10px; border: 1px solid rgba(237,230,216,0.25); }
   .work-item:hover .work-tag { opacity: 1; }
 
+  /* ── WATERMARK ── */
+  .watermark {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.32);
+    pointer-events: none;
+    z-index: 3;
+    user-select: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  }
+
+  .lb-watermark {
+    position: fixed;
+    bottom: 48px;
+    right: 32px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.25);
+    pointer-events: none;
+    z-index: 520;
+    user-select: none;
+  }
+
   /* ── ABOUT ── */
   .about-strip { padding: 90px 48px; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .about-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
@@ -272,6 +300,7 @@
 
     <div class="feat-item" onclick="openPhoto('featured_seagames.jpg', 0)">
       <img class="feat-thumb" src="featured_seagames.jpg" alt="SEA Games Sport Climbing">
+      <span class="watermark">© Perry Mueller</span>
       <div class="feat-caption">
         <span class="feat-caption-title">SEA Games Sport Climbing</span>
         <span class="feat-caption-tag">Photo · Event</span>
@@ -287,26 +316,31 @@
 
     <div class="work-item" onclick="openPhoto('photo1.jpg', 1)">
       <img src="photo1.jpg" alt="Speed climbing celebration">
+      <span class="watermark">© Perry Mueller</span>
       <div class="work-overlay"><span class="work-tag">Photo · Event</span></div>
     </div>
 
     <div class="work-item" onclick="openPhoto('photo2.jpg', 2)">
       <img src="photo2.jpg" alt="Wellness lifestyle">
+      <span class="watermark">© Perry Mueller</span>
       <div class="work-overlay"><span class="work-tag">Photo · Wellness</span></div>
     </div>
 
     <div class="work-item" onclick="openPhoto('photo3.jpg', 3)">
       <img src="photo3.jpg" alt="Bouldering competition crowd">
+      <span class="watermark">© Perry Mueller</span>
       <div class="work-overlay"><span class="work-tag">Photo · Event</span></div>
     </div>
 
     <div class="work-item" onclick="openPhoto('photo4.jpg', 4)">
       <img src="photo4.jpg" alt="Laura Mercier event">
+      <span class="watermark">© Perry Mueller</span>
       <div class="work-overlay"><span class="work-tag">Photo · Lifestyle</span></div>
     </div>
 
     <div class="work-item" onclick="openPhoto('photo5.jpg', 5)">
       <img src="photo5.jpg" alt="Climber silhouette B&W">
+      <span class="watermark">© Perry Mueller</span>
       <div class="work-overlay"><span class="work-tag">Photo · Climbing</span></div>
     </div>
 
@@ -321,16 +355,19 @@
 
     <div class="work-item" onclick="openPhoto('photo6.jpg', 6)">
       <img src="photo6.jpg" alt="Outdoor sport climbing">
+      <span class="watermark">© Perry Mueller</span>
       <div class="work-overlay"><span class="work-tag">Photo · Climbing</span></div>
     </div>
 
     <div class="work-item" onclick="openPhoto('photo7.jpg', 7)">
       <img src="photo7.jpg" alt="Yoga instruction">
+      <span class="watermark">© Perry Mueller</span>
       <div class="work-overlay"><span class="work-tag">Photo · Wellness</span></div>
     </div>
 
     <div class="work-item" onclick="openPhoto('photo8.jpg', 8)">
       <img src="photo8.jpg" alt="Thai flag climber">
+      <span class="watermark">© Perry Mueller</span>
       <div class="work-overlay"><span class="work-tag">Photo · Event</span></div>
     </div>
 
@@ -383,9 +420,15 @@
   <button class="lb-arrow lb-next" onclick="nextPhoto(event)">→</button>
   <div class="lb-content" id="lbContent"></div>
   <div class="lb-counter" id="lbCounter"></div>
+  <span class="lb-watermark">© Perry Mueller</span>
 </div>
 
 <script>
+  // ── RIGHT-CLICK DISABLE ON IMAGES ──
+  document.addEventListener('contextmenu', (e) => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+  });
+
   // ── SLIDESHOW ──
   let current = 0;
   const slides = document.querySelectorAll('.slide');
