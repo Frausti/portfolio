@@ -263,10 +263,10 @@
   </div>
 
   <div class="hero-slideshow">
-    <div class="slide active"><img src="hero4.jpg" alt="SEA Games Sport Climbing"></div>
-    <div class="slide"><img src="hero3.jpg" alt="Outdoor Rock Climbing"></div>
-    <div class="slide"><img src="hero1.jpg" alt="Yoga Instruction"></div>
-    <div class="slide"><img src="hero2.jpg" alt="Wellness Lifestyle"></div>
+    <div class="slide active"><img src="hero4.jpg" alt="SEA Games Sport Climbing"><span class="watermark">© Perry Mueller</span></div>
+    <div class="slide"><img src="hero3.jpg" alt="Outdoor Rock Climbing"><span class="watermark">© Perry Mueller</span></div>
+    <div class="slide"><img src="hero1.jpg" alt="Yoga Instruction"><span class="watermark">© Perry Mueller</span></div>
+    <div class="slide"><img src="hero2.jpg" alt="Wellness Lifestyle"><span class="watermark">© Perry Mueller</span></div>
     <div class="slide-dots">
       <button class="dot active" onclick="goTo(0)"></button>
       <button class="dot" onclick="goTo(1)"></button>
@@ -420,7 +420,6 @@
   <button class="lb-arrow lb-next" onclick="nextPhoto(event)">→</button>
   <div class="lb-content" id="lbContent"></div>
   <div class="lb-counter" id="lbCounter"></div>
-  <span class="lb-watermark">© Perry Mueller</span>
 </div>
 
 <script>
@@ -477,7 +476,11 @@
   }
 
   function renderPhoto(src) {
-    lbContent.innerHTML = `<img class="lb-media" src="${src}" alt="">`;
+    lbContent.innerHTML = `
+      <div style="position:relative;display:inline-block;">
+        <img class="lb-media" src="${src}" alt="">
+        <span style="position:absolute;bottom:10px;right:12px;font-family:var(--mono);font-size:10px;letter-spacing:0.08em;color:rgba(255,255,255,0.32);pointer-events:none;user-select:none;text-shadow:0 1px 3px rgba(0,0,0,0.6);">© Perry Mueller</span>
+      </div>`;
     lbCounter.textContent = `${currentPhotoIndex + 1} / ${photoItems.length}`;
   }
 
