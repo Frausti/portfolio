@@ -115,7 +115,7 @@
   .feat-thumb { width: 100%; display: block; object-fit: cover; filter: brightness(0.82) saturate(0.88); transition: filter 0.4s, transform 0.6s; aspect-ratio: 9/16; }
   .feat-item:hover .feat-thumb { filter: brightness(1) saturate(1); transform: scale(1.02); }
 
-  .feat-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 58px; height: 58px; border-radius: 50%; background: rgba(42,38,32,0.7); border: 1px solid rgba(237,230,216,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s; pointer-events: none; }
+  .feat-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 58px; height: 58px; border-radius: 50%; background: rgba(42,38,32,0.65); border: 1px solid rgba(237,230,216,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s; pointer-events: none; }
   .feat-item:hover .feat-play { background: rgba(92,122,78,0.85); transform: translate(-50%, -50%) scale(1.08); }
   .feat-play svg { margin-left: 3px; }
 
@@ -128,15 +128,15 @@
 
   .work-item { position: relative; overflow: hidden; background: var(--surface); aspect-ratio: 1; cursor: pointer; }
 
-  .work-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; filter: brightness(0.78) saturate(0.85); transition: filter 0.3s, transform 0.5s; }
+  .work-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; filter: brightness(0.78) saturate(0.85); transition: filter 0.3s, transform 0.5s; }
   .work-item:hover img { filter: brightness(1) saturate(1); transform: scale(1.04); }
 
   .work-overlay { position: absolute; inset: 0; background: rgba(42,38,32,0); transition: background 0.3s; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
   .work-item:hover .work-overlay { background: rgba(42,38,32,0.45); }
 
-  .work-play { width: 42px; height: 42px; border-radius: 50%; background: rgba(92,122,78,0.85); display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(0.8); transition: opacity 0.3s, transform 0.3s; }
+  .work-play { width: 42px; height: 42px; border-radius: 50%; background: rgba(42,38,32,0.65); border: 1px solid rgba(237,230,216,0.3); display: flex; align-items: center; justify-content: center; opacity: 1; transition: background 0.3s, transform 0.2s; }
   .work-play svg { margin-left: 2px; }
-  .work-item:hover .work-play { opacity: 1; transform: scale(1); }
+  .work-item:hover .work-play { background: rgba(92,122,78,0.9); transform: scale(1.1); }
 
   .work-tag { font-family: var(--mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text); opacity: 0; transition: opacity 0.3s; padding: 5px 10px; border: 1px solid rgba(237,230,216,0.25); }
   .work-item:hover .work-tag { opacity: 1; }
@@ -288,9 +288,7 @@
     </div>
 
     <div class="feat-item" onclick="openVideo('vimeo:1182120443')">
-      <div class="feat-thumb" style="aspect-ratio:9/16;background:var(--bg3);display:flex;align-items:center;justify-content:center;">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(237,230,216,0.2)" stroke-width="1"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      </div>
+      <img class="feat-thumb" src="vimeo_thumb_featured.jpg" alt="SEA Games Climbing BTS">
       <div class="feat-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
       <div class="feat-caption">
         <span class="feat-caption-title">SEA Games Climbing BTS</span>
@@ -298,8 +296,8 @@
       </div>
     </div>
 
-    <div class="feat-item" onclick="openPhoto('featured_seagames.jpg', 0)">
-      <img class="feat-thumb" src="featured_seagames.jpg" alt="SEA Games Sport Climbing">
+    <div class="feat-item" onclick="openPhoto('photo5.jpg', 5)">
+      <img class="feat-thumb" src="photo5.jpg" alt="Climber Silhouette">
       <span class="watermark">© Perry Mueller</span>
       <div class="feat-caption">
         <span class="feat-caption-title">SEA Games Sport Climbing</span>
@@ -347,9 +345,7 @@
     </div>
 
     <div class="work-item" onclick="openVideo('vimeo:1182399134')">
-      <div style="width:100%;height:100%;background:var(--bg3);display:flex;align-items:center;justify-content:center;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(237,230,216,0.15)" stroke-width="1"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      </div>
+      <img src="vimeo_thumb_grid.jpg" alt="Event Video">
       <div class="work-overlay">
         <div class="work-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         <span class="work-tag">Video · Event</span>
@@ -371,19 +367,11 @@
     </div>
 
     <div class="work-item" onclick="openVideo('vimeo:1182120420')">
-      <div style="width:100%;height:100%;background:var(--bg3);display:flex;align-items:center;justify-content:center;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(237,230,216,0.15)" stroke-width="1"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      </div>
+      <img src="vimeo_thumb_bottom.jpg" alt="Event Video">
       <div class="work-overlay">
         <div class="work-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-        <span class="work-tag">Video · Event</span>
+        <span class="work-tag">Video · Wellness</span>
       </div>
-    </div>
-
-    <div class="work-item" onclick="openPhoto('photo8.jpg', 8)">
-      <img src="photo8.jpg" alt="Thai flag climber">
-      <span class="watermark">© Perry Mueller</span>
-      <div class="work-overlay"><span class="work-tag">Photo · Event</span></div>
     </div>
 
   </div>
@@ -463,16 +451,12 @@
   // ── LIGHTBOX ──
   // All photos in lightbox order (index 0 = featured, 1-9 = grid)
   const photoItems = [
-    'featured_seagames.jpg',
+    'photo5.jpg',
     'photo1.jpg',
     'photo2.jpg',
     'photo3.jpg',
     'photo4.jpg',
-    'photo5.jpg',
     'photo6.jpg',
-    'photo7.jpg',
-    'photo8.jpg',
-    'photo9.jpg',
   ];
 
   let currentPhotoIndex = 0;
