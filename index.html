@@ -220,7 +220,8 @@
   /* ── MOBILE ── */
   @media (max-width: 768px) {
     nav { padding: 16px 20px; }
-    .nav-links { display: none; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { font-size: 9px; letter-spacing: 0.1em; }
     .hero { grid-template-columns: 1fr; padding: 100px 24px 80px; gap: 52px; min-height: auto; }
     .hero h1 { font-size: 52px; }
     section { padding: 70px 24px; }
@@ -261,7 +262,7 @@
   </div>
 
   <div class="hero-slideshow">
-    <div class="slide active"><img src="featured_seagames.jpg" alt="SEA Games Sport Climbing"><span class="watermark">© Perry Mueller</span></div>
+    <div class="slide active"><img src="hero4.jpg" alt="SEA Games Sport Climbing"><span class="watermark">© Perry Mueller</span></div>
     <div class="slide"><img src="hero3.jpg" alt="Outdoor Rock Climbing"><span class="watermark">© Perry Mueller</span></div>
     <div class="slide"><img src="hero1.jpg" alt="Yoga Instruction"><span class="watermark">© Perry Mueller</span></div>
     <div class="slide"><img src="hero2.jpg" alt="Wellness Lifestyle"><span class="watermark">© Perry Mueller</span></div>
@@ -359,7 +360,7 @@
     </div>
 
     <div class="work-item" onclick="openVideo('yt:RNNIV1Jv8jo')">
-      <div style="position:absolute;inset:0;background-image:url('yt_thumb_bottom.jpg');background-size:cover;background-position:center;filter:brightness(0.78) saturate(0.85);transition:filter 0.3s,transform 0.5s;"></div>
+      <div style="position:absolute;inset:0;background-image:url('yt_thumb_bottom.jpg');background-size:cover;background-position:center 20%;filter:brightness(0.78) saturate(0.85);transition:filter 0.3s,transform 0.5s;"></div>
       <div class="work-overlay">
         <div class="work-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         <span class="work-tag">Video · Brand</span>
