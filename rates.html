@@ -400,7 +400,8 @@
   /* ── MOBILE ── */
   @media (max-width: 768px) {
     nav { padding: 16px 20px; }
-    .nav-links { display: none; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { font-size: 9px; letter-spacing: 0.1em; }
     .page-header { grid-template-columns: 1fr; padding: 120px 24px 60px; gap: 40px; }
     .rates-section { padding: 50px 24px; }
     .addon-grid { grid-template-columns: 1fr; }
