@@ -257,6 +257,7 @@
     <p class="hero-sub">Sports & outdoors, wellness, and lifestyle content, shot and edited solo from concept to final cut.</p>
     <div class="hero-cta">
       <a href="#work" class="btn btn-primary">View Work</a>
+      <a href="rates.html" class="btn">View Rates</a>
       <a href="#contact" class="btn">Get in Touch</a>
     </div>
   </div>
@@ -546,13 +547,4 @@
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+      if (en
