@@ -215,9 +215,9 @@
 
 <div class="hero">
   <div class="hero-text">
-    <p class="hero-label">Bangkok · Climbing Specialist · Stonegoat Original</p>
+    <p class="hero-label">Bangkok · Climbing Specialist</p>
     <h1>Rock in one hand,<br><em>camera in<br>the other.</em></h1>
-    <p class="hero-sub">I've been climbing for years and shooting it just as long. I understand the movement, the culture, and the moments that matter because I live them.</p>
+    <p class="hero-sub">I've been climbing for years and shooting it just as long. I understand the movement, the culture, and the moments that matter because I live them. As the original content creator for Stonegoat Climbing, I helped build the visual identity that set a new standard for climbing content in Thailand.</p>
     <div class="hero-cta">
       <a href="#work" class="btn btn-primary">View Work</a>
       <a href="#contact" class="btn">Get in Touch</a>
@@ -243,12 +243,12 @@
   <p class="section-label reveal">Featured Work</p>
   <div class="featured-grid reveal">
 
-    <div class="feat-item" onclick="openVideo('yt:iHY6IFBs1xA')">
-      <img class="feat-thumb" src="yt_thumb_defy.jpg" alt="Climbing Video">
+    <div class="feat-item" onclick="openVideo('yt:3uB7xG-N-_o')">
+      <div class="feat-thumb-bg" style="background-image:url('https://img.youtube.com/vi/3uB7xG-N-_o/maxresdefault.jpg');"></div>
       <div class="feat-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
       <div class="feat-caption">
-        <span class="feat-caption-title">Defy Climbing</span>
-        <span class="feat-caption-tag">Video · Brand</span>
+        <span class="feat-caption-title">Black Diamond Session</span>
+        <span class="feat-caption-tag">Video · Ad</span>
       </div>
     </div>
 
@@ -261,12 +261,12 @@
       </div>
     </div>
 
-    <div class="feat-item" onclick="openPhoto('c_hero3.jpg', 0)">
-      <img class="feat-thumb" src="c_hero3.jpg" alt="Climber Silhouette">
-      <span class="watermark">© Perry Mueller</span>
+    <div class="feat-item" onclick="openVideo('yt:iHY6IFBs1xA')">
+      <img class="feat-thumb" src="yt_thumb_defy.jpg" alt="Defy Climbing">
+      <div class="feat-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
       <div class="feat-caption">
-        <span class="feat-caption-title">SEA Games Sport Climbing</span>
-        <span class="feat-caption-tag">Photo · Event</span>
+        <span class="feat-caption-title">Defy Climbing</span>
+        <span class="feat-caption-tag">Video · Brand</span>
       </div>
     </div>
 
@@ -312,18 +312,18 @@
       </div>
     </div>
 
-    <div class="work-item" onclick="openPhoto('c_photo8.jpg', 4)">
-      <img src="c_photo8.jpg" alt="Outdoor sport climbing">
-      <span class="watermark">© Perry Mueller</span>
-      <div class="work-overlay"><span class="work-tag">Photo · Outdoor</span></div>
-    </div>
-
     <div class="work-item" onclick="openVideo('yt:QRXKc7iwS8Q')">
       <div style="position:absolute;inset:0;background-image:url('yt_thumb_comp.jpg');background-size:cover;background-position:center;filter:brightness(0.78) saturate(0.85);"></div>
       <div class="work-overlay">
         <div class="work-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         <span class="work-tag">Video · Event</span>
       </div>
+    </div>
+
+    <div class="work-item" onclick="openPhoto('c_photo1.jpg', 5)">
+      <img src="c_photo1.jpg" alt="Pink wall competition">
+      <span class="watermark">© Perry Mueller</span>
+      <div class="work-overlay"><span class="work-tag">Photo · Event</span></div>
     </div>
 
     <div class="work-item" onclick="openVideo('yt:RNNIV1Jv8jo')">
@@ -417,13 +417,11 @@
 
   // ── LIGHTBOX ──
   const photoItems = [
-    'c_hero3.jpg',
     'c_photo6.jpg',
     'c_photo7.jpg',
     'c_photo3.jpg',
-    'c_photo8.jpg',
+    'c_photo1.jpg',
     'c_photo2.jpg',
-    'c_photo4.jpg',
   ];
 
   let currentPhotoIndex = 0;
